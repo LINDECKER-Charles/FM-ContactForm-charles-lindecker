@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Contact form</title>
+
+  <link rel="stylesheet" href="css/output.css">
+  <script defer src="./js/script.js"></script>  
+</head>
+<body class="bg-green-200 flex flex-col justify-center item-center w-screen h-screen">
+  <main class=" flex flex-col gap-5
+   absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+   bg-white rounded-2xl w-11/12 sm:w-4/6 lg:w-1/2 min-h-11/12 sm:min-h-2/3 px-12 py-8 my-8 shadow-sm">
+    <h1 class="text-3xl sm:text-2xl font-bold text-grey-900">Contact Us</h1>
+    <form action="" class="flex flex-col gap-4 ">
+      <section class="form-section">
+        <div class="flex-form-input">
+          <label for="first-name" class="text-grey-900">First Name <span >*</span></label>
+          <input type="text" name="first-name" id="first-name" class="input px-2">
+          <p class=" hidden error">This field is required</p>
+        </div>
+        <div class="flex-form-input">
+          <label for="last-name" class="text-grey-900">Last Name <span >*</span></label>
+          <input type="text" name="last-name" id="last-name" class="input px-2">
+          <p class=" hidden error">This field is required</p>
+        </div>
+      </section>
+      <section class="flex flex-col gap-2">
+        <label for="email-adress" class="text-grey-900">Email Address <span >*</span></label>
+        <input type="text" name="email-adress" id="email-adress" class="input px-2">
+        <p class=" hidden error">This field is required</p>
+        <p class=" hidden error">Please enter a valid email address</p>
+      </section>
+      <section class="flex flex-col gap-2">
+          <label for="query-type" class="text-grey-900">Query Type <span >*</span></label>
+          
+          <div class="form-section">
+            <div class="input form-radio">
+              <input type="radio" name="query-type" id="general-enqurity" value="general-enqurity">
+              <label for="general-enqurity">General Enquiry</label>
+            </div>
+            <div class="input form-radio">
+              <input type="radio" name="query-type" id="support-request" value="general-enqurity">
+              <label for="support-request">Support Request</label>
+            </div>
+          </div>
+          <p class="hidden error">Please select a query type</p>
+      </section>
+      <section class="flex flex-col gap-2 w-full">
+        <label for="message" class="text-grey-900">Message <span >*</span></label>
+        <textarea class="input px-2 min-h-38 sm:min-h-24" name="message" id="message"></textarea>
+        <p class="hidden error">This field is required</p>
+      </section>
+      <section class="flex flex-col gap-2 my-8 w-full">
+        <div class="flex flex-row gap-4 justify-start w-full">
+          <input type="checkbox" name="consent" id="consent">
+          <label for="consent" class="text-grey-900">I consent to being contacted by the team <span >*</span></label>
+        </div>
+        <p class="hidden error">To submit this form, please consent to being contacted</p>
+      </section>
+      <button type="submit" class="button">Submit</button>
+    </form>
+  </main>
+  <section id="modal" class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-4 border rounded-sm flex flex-col items-center justify-center gap-4 hidden">
+      <h2 class="text-2xl font-bold text-grey-900">Message Sent!</h2>
+      <p class="mb-2">Thanks for completing the form. We'll be in touch soon!</p>
+  </section>
+  <footer class="sr-only text-center text-xs">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="text-blue-500">Frontend Mentor</a>. 
+    Coded by <a href="https://www.linkedin.com/in/charles-lindecker/" class="text-blue-500">Charles LINDECKER</a>.
+  </footer>
+</body>
+</html>

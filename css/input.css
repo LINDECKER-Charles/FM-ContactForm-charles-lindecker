@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'Karla';
+    src: url('../assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400, 700;
+    font-style: normal;
+}
+
+@theme{
+  --font-sans: "Karla";
+
+  --text-base: 16px;
+  --text-big: 64px;
+  --text-minibig: 42px;
+
+  --breakpoint-ssm: 375px;
+
+  --color-white: hsl(0, 100%, 100%);
+  --color-grey-500: hsl(186, 15%, 59%);
+  --color-grey-900: hsl(187, 24%, 22%);
+
+  --color-green-200: hsl(148, 38%, 91%);
+  --color-green-600: hsl(169, 82%, 27%);
+  --color-red: hsl(0, 66%, 54%);
+
+}
+
+@layer components {
+  form {
+    @apply select-none;
+  }
+  span {
+    @apply text-green-600;
+  }
+
+  main {
+    @apply transition-all duration-200 ease-in;
+
+  }
+  main.disabled {
+    @apply blur-sm pointer-events-none;
+  }
+
+  .error {
+    @apply text-red;
+  }
+
+  .button {
+    @apply w-full bg-green-600 text-white rounded-md p-3;
+  }
+  .button:hover, .button:active{
+    @apply bg-green-200 text-black cursor-pointer transition-colors ease-in duration-150;
+  }
+
+  .flex-form-input {
+    @apply flex flex-col gap-2 w-full md:w-1/2;
+  }
+  .input {
+    @apply border rounded-md border-grey-500 py-2;
+  }
+  .form-section{
+    @apply flex flex-col md:flex-row gap-4 justify-start w-full;
+  }
+  .form-radio{
+    @apply w-full py-2 px-6 text-grey-900 flex flex-row gap-2 items-center;
+  }
+}
+
